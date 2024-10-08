@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.doingArea{
+  width: 80%;
+}
+
+/* ===== pianoArea ===== */
+.pianoArea {
+  overflow-x: auto;
+  
+}
+.pianoKeys {
+  display: flex;
+  list-style: none;
+  width: max-content; //pianoArea에 overflow-x: auto를 해도 안줄어들게 해줌
+}
+.pianoKeys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+.pianoKeys .white {
+  width: 44px;
+  height: 180px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+.pianoKeys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+.pianoKeys .black {
+  z-index: 2;
+  width: 20px;
+  height: 110px;
+  margin: 0 -11px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+.pianoKeys .black.active {
+  box-shadow: inset -5px -10px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+.pianoKeys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #a2a2a2;
+  font-size: 9px;
+  text-align: center;
+}
+.pianoKeys .key.hide span {
+  display: none;
+}
+.pianoKeys .black span {
+  bottom: 13px;
+  color: #888888;
+}
+/* ========== */
+
+/* ===== .note의 key별 위치 ===== */
+.c4{
+  top: 20px;
+}
+.c4 .stroke{
+  bottom: 6px;
+  left: -2px;
+}
+.cS4{
+  top: 18px;
+}
+.d4{
+  top: 13px;
+}
+.dS4{
+  top: 8px;
+}
+.e4{
+  top: 4px;
+}
+.f4{
+  top: 0px;
+}
+.fS4{
+  top: -5px;
+}
+.fS4 .note{
+  top: 0px;
+  /* transform: rotateY(180deg); */
+  transform: rotateX(180deg);
+}
+
+
+.g4{
+  
+}
+.gS4{
+  
+}
+.a4{
+  top: ;
+}
+.aS4{
+  top: ;
+}
+.b4{
+  top: ;
+}
+.c5{
+  top: ;
+}
+.cS5{
+  top: ;
+}
+.d5{
+  top: ;
+}
+.dS5{
+  top: ;
+}
+.e5{
+  top: ;
+}
+.f5{
+  top: ;
+}
+.fS5{
+  top: ;
+}
+.g5{
+  top: ;
+}
+.gS5{
+  top: ;
+}
+.a5{
+  top: ;
+}
+.aS5{
+  top: ;
+}
+.b5{
+  top: ;
+}
+
+/* ========== */
+
+
+@media screen and (min-width: 500px) {
+  .pianoKeys .white {
+    width: calc(44px * 1.5);
+    height: calc(180px * 1.5);
+  }
+  .pianoKeys .black {
+    width: calc(20px * 1.5);
+    height: calc(110px * 1.5);
+    margin: 0 -16px;
+  }
+  .pianoKeys .key span {
+    font-size: 13px;
+  }
+}
